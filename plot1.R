@@ -1,4 +1,4 @@
-data<-read.csv("G:\\household_power_consumption.txt",sep=";",dec=".",colClasses=c(rep("character",9))
+data<-read.csv("household_power_consumption.txt",sep=";",dec=".",colClasses=c(rep("character",9))
 data$Date <- as.Date(data$Date , "%d/%m/%Y")
 workdata <- subset(data, Date >=  "2007-02-01" & Date <=  "2007-02-02")
 workdata$Global_active_power <- as.numeric(workdata$Global_active_power)
